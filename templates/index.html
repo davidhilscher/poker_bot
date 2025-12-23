@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Pre-flop Poker Strategy Bot</title>
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Poker Strategy Bot</h1>
+
+        <div class="card">
+            <label for="hand">Your Hand (e.g., 87s, AK, TT):</label>
+            <input id="hand" type="text" placeholder="Example: AKs or TT" />
+
+            <label for="position">Position:</label>
+            <select id="position">
+                <option>UTG</option>
+                <option>MP</option>
+                <option>CO</option>
+                <option selected>BTN</option>
+                <option>SB</option>
+                <option>BB</option>
+            </select>
+
+            <label for="action" id="actionLabel">Facing Action:</label>
+            <select id="action">
+                <option>Folded to you</option>
+                <option>Limp(s)</option>
+                <option>Raise</option>
+                <option>Raise + Call</option>
+                <option>Raise + 3-bet</option>
+            </select>
+
+            <button id="analyzeBtn">Analyze</button>
+        </div>
+
+        <h2>Results</h2>
+        <pre id="output" class="output">Awaiting input...</pre>
+    </div>
+
+    <script>
+        const positionSelect = document.getElementById("position");
+        const actionSelect = document.getElementById("action");
+        const actionLabel = document.getElementById("actionLabel");
+
+        positionSelect.addEventListener("change", () => {
+            const pos = positionSelect.value;
+            if (pos === "UTG") {
+                actionSelect.style.display = "none";
+                actionLabel.style.display = "none";
+            } else {
+                actionSelect.style.display = "block";
+                actionLabel.style.display = "block";
+            }
+        });
+
+        document.getElementById("analyzeBtn").addEventListener("click", async () => {
+            const hand = document.getElementById("hand").value.trim();
+            const position = document.getElementById("position").value;
+            const action = position === "UTG" ? "Folded to you" : document.getElementById("action").value;
+
+            if (!hand) {
+                alert("Enter a hand (e.g., AKs, 87s, TT).");
+                return;
+            }
+
+            document.getElementById("output").innerText = "Analyzing...";
+
+            try {
+                const r = await fetch("/analyze", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ hand, position, action })
+                });
+                const data = await r.json();
+                if (data.error) {
+                    document.getElementById("output").innerText = "Error: " + data.error;
+                } else {
+                    document.getElementById("output").innerText =
+`Hand: ${data.hand}
+Position: ${data.position}
+Facing Action: ${data.action}
+
+AI Advice:
+${data.advice}`;
+                }
+            } catch (err) {
+                document.getElementById("output").innerText = "Network or server error: " + err;
+            }
+        });
+    </script>
+</body>
+</html>

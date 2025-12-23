@@ -1,0 +1,26 @@
+{
+  "o": {
+    "id": "o",
+    "vpip": 0.3,
+    "pfr": 0.2,
+    "aggression": 0.5,
+    "fold_to_cbet": 0.5,
+    "showdown": 0.5
+  },
+  "1": {
+    "id": "1",
+    "vpip": 0.1,
+    "pfr": 0.2,
+    "aggression": 0.5,
+    "fold_to_cbet": 0.5,
+    "showdown": 0.5
+  },
+  "2": {
+    "id": "2",
+    "vpip": 0.4,
+    "pfr": 0.2,
+    "aggression": 0.7,
+    "fold_to_cbet": 0.5,
+    "showdown": 0.5
+  }
+}
