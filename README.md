@@ -1,6 +1,6 @@
 # poker_bot
 <p align="center">
-  <img src="https://pngkit.com/png/full/655-6550907_poker-cards.png" width="180" alt="Playing Cards"/>
+  <img src="pokergit.png" width="180" alt="Poker Image"/>
 </p>
 
 # Poker Algorithm & Opponent Modeling
