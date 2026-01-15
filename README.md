@@ -3,6 +3,7 @@
   <img src="pokergit.png" width="180" alt="Poker Image"/>
 </p>
 
+
 # Poker Algorithm & Opponent Modeling
 
 Pre-flop decision bot for No Limit Texas Hold'em
