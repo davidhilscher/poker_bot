@@ -1,6 +1,6 @@
 # poker_bot
 <p align="center">
-  <img src="pokergit.png" width="180" alt="Poker Image"/>
+  <img src="pokergit.jpg" width="180" alt="Poker Image"/>
 </p>
 
 
