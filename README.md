@@ -1,4 +1,36 @@
 # poker_bot
+<p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/5/52/Poker-sm.png" width="120" alt="Poker Logo"/>
+</p>
+
+# Poker Algorithm & Opponent Modeling
+
+Tracking my Python poker algorithm project, including:
+
+- Opponent modeling
+- Hand evaluation
+- Probabilistic decision making
+- API deployment
+
+---
+
+## Project Status
+
+- ✅ Core algorithm implemented
+- ✅ Opponent modeling integrated
+- ⚙️ API deployed via FastAPI
+
+---
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [Usage](#usage)
+- [Folder Structure](#folder-structure)
+- [Contributing](#contributing)
+
+
 Pre-flop decision bot for No Limit Texas Hold'em
 
 Built and deployed a FastAPI-based poker strategy engine with algorithmic pre-flop logic, opponent modeling, JSON persistence, and a web UI. Designed REST endpoints and deployed on Render.
