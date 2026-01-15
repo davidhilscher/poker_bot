@@ -1,34 +1,10 @@
 # poker_bot
 <p align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/5/52/Poker-sm.png" width="120" alt="Poker Logo"/>
+  <img src="https://www.pngkit.com/png/detail/59-594581_premier-poker-chips-logo-chips-poker-png.png" width="180" alt="Poker Chips"/>
 </p>
 
 # Poker Algorithm & Opponent Modeling
-
-Tracking my Python poker algorithm project, including:
-
-- Opponent modeling
-- Hand evaluation
-- Probabilistic decision making
-- API deployment
-
----
-
-## Project Status
-
-- ✅ Core algorithm implemented
-- ✅ Opponent modeling integrated
-- ⚙️ API deployed via FastAPI
-
----
-
-## Table of Contents
-
-- [Overview](#overview)
-- [Features](#features)
-- [Usage](#usage)
-- [Folder Structure](#folder-structure)
-- [Contributing](#contributing)
+Tracking my Python poker algorithm project and related tools.
 
 
 Pre-flop decision bot for No Limit Texas Hold'em
