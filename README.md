@@ -1,11 +1,9 @@
 # poker_bot
 <p align="center">
-  <img src="https://www.pngkit.com/png/detail/59-594581_premier-poker-chips-logo-chips-poker-png.png" width="180" alt="Poker Chips"/>
+  <img src="https://pngkit.com/png/full/655-6550907_poker-cards.png" width="180" alt="Playing Cards"/>
 </p>
 
 # Poker Algorithm & Opponent Modeling
-Tracking my Python poker algorithm project and related tools.
-
 
 Pre-flop decision bot for No Limit Texas Hold'em
 
